@@ -19,9 +19,9 @@
   } 
 </style>
 <?php
-$dsn = "mysql:host=mysql51.websupport.sk;port=3309;unix_socket=/tmp/mysql51.sock;dbname=gooseberry14";
+$dsn = "mysql:host=mysql51.websupport.sk;port=3309;unix_socket=/tmp/mysql51.sock;dbname=gooseberry15";
 try{
-  $db = new PDO($dsn, "gooseberry14", "gooseberry14*gy");
+  $db = new PDO($dsn, "gooseberry15", "gooseberry15*gy");
 	$db->exec("SET CHARACTER SET utf8");
 } catch (Exception $e) {
 		echo "Failed: " . $e->getMessage();

@@ -9,6 +9,6 @@ $config['db_password'] = 'gooseberry15*gy';
 $config['db_name'] = 'gooseberry15';
 $config['db_prefix'] = 'cms_';
 $config['timezone'] = 'Europe/Bratislava';
-$config['root_url'] = 'http://gooseberry.sk';
-$config['uploads_url'] = 'http://gooseberry.sk/uploads';
+$config['root_url'] = 'http://localhost/fix-gooseberry/';
+$config['uploads_url'] = 'http://localhost/fix-gooseberry//uploads';
 ?>

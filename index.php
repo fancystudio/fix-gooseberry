@@ -1,4 +1,5 @@
 <?php
+error_reporting( E_ALL );
 #CMS - CMS Made Simple
 #(c)2004 by Ted Kulp (wishy@users.sf.net)
 #This project's homepage is: http://www.cmsmadesimple.org

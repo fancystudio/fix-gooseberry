@@ -1,0 +1,41 @@
+for($i=0;$i<count($files);$i++){
+  
+  if($fileIteration % 2 == 1){
+    //echo $fileIteration."</br>";
+    if((substr($files[$fileIteration]->file_name, -3, 3) == "mp4" || substr($files[$fileIteration]->file_name, -3, 3) == "mp3") && (substr($files[$fileIteration-1]->file_name, -3, 3) == "png" || substr($files[$fileIteration-1]->file_name, -3, 3) == "jpg")){
+       $imageFound = false;
+       for($j=$fileIteration+1;$j<count($files);$j++){
+
+        $tempArrayVideo = array();
+        if(substr($files[$j]->file_name, -3, 3) == "jpg" || substr($files[$j]->file_name, -3, 3) == "png"){
+          $imageFound = true;
+          $tempArrayVideo = $files[$fileIteration];
+          $files[$fileIteration] = $files[$j];
+          $tempArray = array();
+          //echo "!!!".$fileIteration."!!!".$j."!!!";
+          //echo "!!!".$fileIteration."!!!".$j."!!!";
+          if($fileIteration+1 == $j){
+            $files[$j] = $tempArrayVideo;   
+          }
+          for($k=$fileIteration+1;$k<$j;$k++){
+            //echo "!!!".$files[$k]->file_name."!!!";
+            $tempArray = $files[$k];
+            $files[$k] = $tempArrayVideo;
+            $tempArrayVideo = $files[$k+1];
+            $files[$k+1] = $tempArray;
+          }
+          if($imageFound){
+          break;  
+          }
+        }
+        if($imageFound){
+          break;  
+          }
+       }
+    }
+    for($l=0;$l<count($files);$l++){
+      //echo $files[$l]->file_name."</br>";
+    }
+  } 
+  $fileIteration++;
+}

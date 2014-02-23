@@ -1,10 +1,8 @@
-
 var contentwrapIsShow = false;
 var canAnimate = true;
 var actualLang = "sk"; 
 var isOnreference = false;
 var click = (navigator.userAgent.search('Mobile') > 0 ) ? "touchstart" : "click";
-
 $(document).ready(function(){
 initLang(); //nacitanie jazyku
 initHlavnySlider(); 
@@ -23,7 +21,10 @@ $(".swiper-container").css("height",300);
 	    scrollbar: {
 	    container :'.swiper-scrollbar',
 	    hide: true,
-	    draggable: false,  
+	    draggable: false,
+	    onInit : function(){
+			   console.log("initFinish");
+		   }
 	    }
   });
                           

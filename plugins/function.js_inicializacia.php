@@ -80,6 +80,9 @@ $(".swiper-container").css("height",300);
 	    container :'.swiper-scrollbar',
 	    hide: false,
 	    draggable: false
+	    },
+   		onFirstInit : function(){
+			$(".loader").css("display","none");
 	    }
   });
   if(ieVersion < 9){

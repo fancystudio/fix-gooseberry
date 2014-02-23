@@ -1,4 +1,3 @@
-
 <?php
 ini_set("display_errors", 1);
 #CMS - CMS Made Simple
@@ -82,7 +81,7 @@ $(".swiper-container").css("height",300);
 	    draggable: false
 	    },
    		onFirstInit : function(){
-			$(".loader").css("display","none");
+			//$(".loader").css("display","none");
 	    }
   });
   if(ieVersion < 9){

@@ -11,4 +11,5 @@ $config['db_prefix'] = 'cms_';
 $config['timezone'] = 'Europe/Bratislava';
 $config['root_url'] = 'http://localhost/fix-gooseberry';
 $config['uploads_url'] = 'http://localhost/fix-gooseberry/uploads';
+$config['output_compression'] = true;
 ?>
